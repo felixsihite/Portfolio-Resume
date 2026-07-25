@@ -1884,8 +1884,8 @@ body.no-scroll {
     color: #F37626;
 }
 
-.devicon-anaconda-original {
-    color: #44A833;
+.devicon-streamlit-plain {
+    color: #BD4143;
 }
 
 iconify-icon[icon="simple-icons:numpy"] {
@@ -2166,7 +2166,12 @@ iconify-icon[icon="simple-icons:looker"] {
 
 .portfolio-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+}
+
+.portfolio-card.hide {
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -2182,8 +2187,8 @@ iconify-icon[icon="simple-icons:looker"] {
 }
 
 .portfolio-card {
-    position: relative;
-    overflow: hidden;
+        position: relative;
+        overflow: hidden;
 }
 
 .portfolio-image {
@@ -2191,6 +2196,13 @@ iconify-icon[icon="simple-icons:looker"] {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .portfolio-image i {
@@ -2320,8 +2332,10 @@ iconify-icon[icon="simple-icons:looker"] {
 }
 
 .portfolio-cta {
-    text-align: center;
-    margin-top: 3rem;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .services-grid {
