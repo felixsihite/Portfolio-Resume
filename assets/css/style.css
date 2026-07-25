@@ -1332,8 +1332,8 @@ body.no-scroll {
 .badge-top {
     bottom: auto;
     right: auto;
-    top: 3%;
-    left: 80%;
+    top: -10%;
+    left: 40%;
 }
 
 .badge-bottom {
